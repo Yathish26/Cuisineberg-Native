@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Config from 'react-native-config';
 import { Svg, Circle, Path } from 'react-native-svg';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Constants from 'expo-constants';
 
 const RetailLogin = () => {
     const [formData, setFormData] = useState({ email: '', password: '' });
     const [message, setMessage] = useState('');
     const navigation = useNavigation();
 
-    const API_URL = Config.API_URL;
+    const API_URL = Constants.expoConfig.extra.API_URL;
 
     useEffect(() => {
         const checkAuth = async () => {
@@ -145,13 +145,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255, 255, 255, 0.9)',
         borderRadius: 12,
         padding: 24,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 4 },
-        shadowOpacity: 0.1,
-        shadowRadius: 10,
-        elevation: 5,
-        borderWidth: 1,
-        borderColor: 'rgba(200, 220, 255, 0.5)',
     },
     header: {
         alignItems: 'center',

@@ -10,6 +10,8 @@ import { useFonts } from 'expo-font';
 import RetailLogin from "./Retail/RetailLogin";
 import { registerRootComponent } from 'expo';
 import Retail from "./Retail/Retail";
+import RetailRegister from "./Retail/RetailRegister";
+import Test from "./Test";
 
 registerRootComponent(App);
 
@@ -23,8 +25,11 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={HomeScreen} />
+          
+          <Stack.Screen name="Test" component={Test} />
           <Stack.Screen name="RetailLogin" component={RetailLogin} />
+          <Stack.Screen name="RetailRegister" component={RetailRegister} />
+          <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="RetailHome" component={Retail} />
           <Stack.Screen name="Order" component={Order} />
           <Stack.Screen name="Restaurant" component={Restaurant} />
