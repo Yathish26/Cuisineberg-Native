@@ -1,17 +1,15 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "./HomeScreen";
-import Order from "./Order";
-import Restaurant from "./Restaurant";
-import Works from "./Works";
-import './global.css';
+import HomeScreen from "./src/HomeScreen";
+import Order from "./src/Order";
+import Restaurant from "./src/Restaurant";
+import Works from "./src/Works";
 import { useFonts } from 'expo-font';
-import RetailLogin from "./Retail/RetailLogin";
+import RetailLogin from "./src/Retail/RetailLogin";
 import { registerRootComponent } from 'expo';
-import Retail from "./Retail/Retail";
-import RetailRegister from "./Retail/RetailRegister";
-import Test from "./Test";
+import Retail from "./src/Retail/Retail";
+import RetailRegister from "./src/Retail/RetailRegister";
 
 registerRootComponent(App);
 
@@ -25,8 +23,6 @@ export default function App() {
     <>
       <NavigationContainer>
         <Stack.Navigator>
-          
-          <Stack.Screen name="Test" component={Test} />
           <Stack.Screen name="RetailLogin" component={RetailLogin} />
           <Stack.Screen name="RetailRegister" component={RetailRegister} />
           <Stack.Screen name="Home" component={HomeScreen} />
