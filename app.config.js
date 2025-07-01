@@ -6,7 +6,11 @@ export default {
     version: "1.0.0",
     userInterfaceStyle: "automatic",
     extra: {
-      API_URL: "http://192.168.1.35:5000"
+      API_URL: "https://api.hirearrive.in",
+    },
+    updates: {
+      enabled: true,
+      fallbackToCacheTimeout: 0
     }
   }
-}
+};
